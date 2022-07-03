@@ -1,0 +1,42 @@
+.coctaillll{
+display: grid;
+grid-template-columns: 2fr 10fr;
+}
+.coctail{
+    width: 800px;
+    margin-left: auto;
+        margin-right: auto;
+    }
+    .text{
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 45px;
+     }
+     .amount2{
+        float: left; 
+        width: 50%;
+    
+       
+     }
+     .amount{
+        text-align: right;  
+     }
+    .dialogsItems{
+    padding: 10 px;
+    color: aliceblue;
+    }
+    
+    .dialogsItems .active{
+        color: gold;
+    }
+    
+    .messages{
+        padding: 10 px;
+    }
+    .messages .message{
+        color: aliceblue;
+    }
+    

@@ -1,0 +1,38 @@
+.leftmenu {
+    width: 300px;
+    top:50px;  
+    left:0px; 
+   
+    
+    }
+.name{
+    margin-top: 10px;
+    text-align:  center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+.profile_type{
+    text-align:  center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+.phon{
+    margin-top: 50px;
+    text-align:  center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+ .item img {
+         margin-top: 20px;
+         margin-left: 25px;
+         width: 240px;
+         height: 240px;
+         border-radius: 150px;
+        }
+    
+.block{
+  display:inline-block ;
+}

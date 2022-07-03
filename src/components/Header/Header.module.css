@@ -1,0 +1,55 @@
+.nav{
+    grid-area: h;
+    background-color: #2d2e32;
+    }
+.item a {
+    color: white;
+}    
+
+    .margin{
+        float: right;
+
+    }
+
+    .neon {
+         text-decoration: none;
+            color: white;
+            display: inline-block;
+            position: relative;
+            padding: 10px 20px;
+            border: 1px solid;
+            border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+            border-image-slice: 1;
+            margin: 20px 5px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            overflow: hidden;
+            letter-spacing: 2px;
+            transition: .8s cubic-bezier(.165, .84, .44, 1);
+        }
+        
+        .neon:before {
+        content: '';
+        position: absolute;
+        background: #ff14bd;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        transform: perspective(1em) rotateX(40deg) scale(1, 0.3);
+        filter: blur(1em);
+        bottom: -2em;
+        opacity: 0.7;
+        }
+        .neon:hover:before {
+        opacity: 1;
+        }
+        .neon:hover {
+        background: red;
+        color: #fff;
+        box-shadow: 0 0 2em 0.5em red;
+        }
+        
+         .logo{
+            height: 80px;
+            width: 190px;
+         }

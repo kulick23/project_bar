@@ -1,0 +1,10 @@
+.postblock{
+    padding: 10px;
+    display:inline ;
+}
+.text{
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}

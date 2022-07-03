@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
+import Header from './components//Header/Header';
+import Profile from './components/Profile/Profile';
+import Order from './components/Order/Order';
+import Menu from './components/Menu/Menu';
+import Slider from './components/Party/Slider'
+import SingInForm from '../src/components/Login/Sing/SingIn'
+import SignUpForm from '../src/components/Login/Sing/SingUp'
+import { Routes, Route } from 'react-router-dom';
+
+const App = (props) =>{
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <div className = 'app-wrapper'>
+
+<Header/>
+ <div className = 'app-wrapper-content'>
+ <Routes>
+ <Route path ="/profile" element = {<SignUpForm />} />
+ <Route path = "/sign-in" element = {<SingInForm/>}/>
+ <Route path ="/registrprofile" element = {<Profile state = {props.state.ProfilePage}/>} />
+ <Route  path ="/orders" element = {<Order state = {props.state.OrderPage}/>}/>
+ <Route  path ="/menu" element = {<Menu state = {props.state.MenuPage}/>}/>
+ <Route  path ="/party" element = {<Slider state = {props.state.PartyPage}/>}/>
+ </Routes>
+ </div>
     </div>
+    
   );
 }
+
 
 export default App;
