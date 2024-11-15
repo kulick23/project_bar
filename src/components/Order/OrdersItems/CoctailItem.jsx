@@ -1,16 +1,34 @@
 import React from 'react';
-import s from './../Order.module.css'
+import s from './../Order.module.css';
+import orderStore from '../../../store/OrderStore';
 
-const CoctailItem = (props) =>{
-    return (
-        <div className = {s.coctail}>
-          <div className={s.amount2}>  {props.name} ({props.id})</div>
-          <div className={s.amount}>  {props.id} руб</div>
-   <hr></hr> 
-</div>
-    )
-}
+const CoctailItem = (props) => {
+  const increaseQuantity = () => {
+    orderStore.increaseQuantity(props.id);
+  };
 
+  const decreaseQuantity = () => {
+    orderStore.decreaseQuantity(props.id);
+  };
 
+  const removeOrder = () => {
+    orderStore.removeOrder(props.id);
+  };
 
-export default CoctailItem
+  return (
+    <div className={s.coctail}>
+      <img src={props.img} alt={props.name} className={s.coctailImage} />
+      <div className={s.amount2}>{props.name} </div>
+      <div className={s.amount}>{props.price} $</div>
+      <div className={s.quantity}>
+        <button onClick={decreaseQuantity}>-</button>
+        <span>{props.quantity}</span>
+        <button onClick={increaseQuantity}>+</button>
+      </div>
+      <button onClick={removeOrder} className={s.removeButton}>Delete</button>
+    
+    </div>
+  );
+};
+
+export default CoctailItem;

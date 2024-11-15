@@ -1,36 +1,28 @@
 import React from 'react';
 import './App.css';
-
-import Header from './components//Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
 import Order from './components/Order/Order';
 import Menu from './components/Menu/Menu';
-import Slider from './components/Party/Slider'
-import SingInForm from '../src/components/Login/Sing/SingIn'
-import SignUpForm from '../src/components/Login/Sing/SingUp'
-import { Routes, Route } from 'react-router-dom';
+import Slider from './components/Party/Slider';
+import Auth from './components/Auth/Auth';
 
-const App = (props) =>{
-  
+const App = (props) => {
   return (
-   
-    <div className = 'app-wrapper'>
-
-<Header/>
- <div className = 'app-wrapper-content'>
- <Routes>
- <Route path ="/profile" element = {<SignUpForm />} />
- <Route path = "/sign-in" element = {<SingInForm/>}/>
- <Route path ="/registrprofile" element = {<Profile state = {props.state.ProfilePage}/>} />
- <Route  path ="/orders" element = {<Order state = {props.state.OrderPage}/>}/>
- <Route  path ="/menu" element = {<Menu state = {props.state.MenuPage}/>}/>
- <Route  path ="/party" element = {<Slider state = {props.state.PartyPage}/>}/>
- </Routes>
- </div>
+    <div className='app-wrapper'>
+      <Header />
+      <div className='app-wrapper-content'>
+        <Routes>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/orders" element={<Order/>} />
+          <Route path="/menu" element={<Menu/>} />
+          <Route path="/party" element={<Slider/>} />
+        </Routes>
+      </div>
     </div>
-    
   );
 }
-
 
 export default App;

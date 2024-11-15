@@ -1,42 +1,146 @@
-.coctaillll{
-display: grid;
-grid-template-columns: 2fr 10fr;
+.coctaillll {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
 }
-.coctail{
-    width: 800px;
-    margin-left: auto;
-        margin-right: auto;
-    }
-    .text{
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        color: white;
-        text-align: center;
-        margin-top: 15px;
-        font-size: 45px;
-     }
-     .amount2{
-        float: left; 
-        width: 50%;
-    
-       
-     }
-     .amount{
-        text-align: right;  
-     }
-    .dialogsItems{
-    padding: 10 px;
-    color: aliceblue;
-    }
-    
-    .dialogsItems .active{
-        color: gold;
-    }
-    
-    .messages{
-        padding: 10 px;
-    }
-    .messages .message{
-        color: aliceblue;
-    }
-    
+
+.coctail {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.coctailImage {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 45px;
+}
+
+.amount2 {
+  float: left;
+  width: 50%;
+}
+
+.amount {
+  text-align: right;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity button {
+  margin: 0 5px;
+}
+
+.removeButton {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  margin: 20px 5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+  background: #282c34;
+}
+
+.removeButton:before {
+  content: '';
+  position: absolute;
+  background: #ff14bd;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.3);
+  filter: blur(1em);
+  bottom: -2em;
+  opacity: 0.7;
+}
+
+.removeButton:hover:before {
+  opacity: 1;
+}
+
+.removeButton:hover {
+  background: #f11616;
+  color: #fff;
+  box-shadow: 0 0 2em 0.5em #f55555;
+}
+
+.dialogsItems {
+  padding: 10px;
+  color: aliceblue;
+}
+
+.dialogsItems .active {
+  color: gold;
+}
+
+.messages {
+  padding: 10px;
+}
+
+.messages .message {
+  color: aliceblue;
+}
+
+
+.orderButton {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 30px;
+  position: relative;
+  border: 2px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  border-image-slice: 1;
+  transition: .4s;
+  margin-left: 40px;
+  background-color: #34353a;
+}
+
+.orderButton:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: .4s;
+}
+
+.orderButton:hover:after {
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+}
+
+
+.emptyText {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+}

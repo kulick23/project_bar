@@ -1,21 +1,19 @@
-.app-wrapper{
+.app-wrapper {
   margin: 0 auto;
   display: grid;
   width: auto;
-grid-template-areas: 
-"h h"
-"c c ";
+  grid-template-areas:
+    "h h"
+    "c c ";
 
- 
+
   grid-template-rows: 80px 1fr;
   grid-template-columns: 2fr 10fr;
- 
+
 }
 
 
-.app-wrapper-content{
-    grid-area: c;
-   
+.app-wrapper-content {
+  grid-area: c;
+
 }
-
-
